@@ -1,0 +1,25 @@
+{
+  "name": "list-diff",
+  "version": "0.1.0",
+  "description": "Diff two list",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/livoras/list-diff.git"
+  },
+  "keywords": [
+    "diff"
+  ],
+  "author": "Livoras",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/livoras/list-diff/issues"
+  },
+  "homepage": "https://github.com/livoras/list-diff",
+  "devDependencies": {
+    "chai": "^3.4.1"
+  }
+}
