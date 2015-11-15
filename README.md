@@ -1,2 +1,2 @@
 # list-diff
-Diff two list in O(n).
+Diff two lists in O(n).
