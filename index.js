@@ -1,7 +1,6 @@
 /**
  * Diff two list in O(N).
  */
-
 function diff(oldList, newList, key) {
   if (!key) throw new Error("List's items must have keys!")
   var oldMap = makeMap(oldList, key)
@@ -37,12 +36,12 @@ function diff(oldList, newList, key) {
       j++
     } else {
       var itemKey = getItemKey(item, key)
+      // new item, just inesrt it
       if (!oldMap.hasOwnProperty(itemKey)) {
-        // new item, just inesrt it
         insert(i, item)
       } else {
         // if remove current simulateItem make item in right place
-        // the just remove it
+        // then just remove it
         if (simulateList[j + 1] === item) {
           remove(i)
           j++ // after removing, current j is right, just jump to next one
