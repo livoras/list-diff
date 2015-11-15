@@ -9,21 +9,65 @@ function diff(oldList, newList, key) {
 
   var inserts = []
   var removes = []
-  var moves = []
 
-  var list = oldList.slice(0)
+
+  // a simulate list ot manipulate
+  var simulateList = oldList.slice(0)
   var i = 0;
 
   // first pass remove all items are not in new map
-  while(i < list.length) {
-    var item = list[i]
+  while(i < simulateList.length) {
+    var item = simulateList[i]
     var itemKey = getItemKey(item, key)
     if (!newMap.hasOwnProperty(itemKey)) {
-      list.splice(i, 1)
-      removes.push({index: i})
+      remove(i)
     } else {
       i++;
     }
+  }
+
+  // i is cursor pointing to a item in new list
+  // j is cursor pointing to a item in simulateList
+  var j = i = 0
+  while(i < newList.length) {
+    var item = newList[i]
+    var simulateItem = simulateList[j]
+
+    if (item === simulateItem) {
+      j++
+    } else {
+      var itemKey = getItemKey(item, key)
+      if (!oldMap.hasOwnProperty(itemKey)) {
+        // new item, just inesrt it
+        insert(i, item)
+      } else {
+        // if remove current simulateItem make item in right place
+        // the just remove it
+        if (simulateList[j + 1] === item) {
+          remove(i)
+          j++ // after removing, current j is right, just jump to next one
+        } else {
+          // else insert item
+          insert(i, item)
+        }
+      }
+    }
+
+    i++
+  }
+
+  function remove(index) {
+    simulateList.splice(index, 1)
+    removes.push({index: index})
+  }
+
+  function insert(index, item) {
+    inserts.push({index: index, item: item})
+  }
+
+  return {
+    inserts: inserts,
+    removes: removes
   }
 
 }
