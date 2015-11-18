@@ -27,8 +27,8 @@ describe("List diff", function() {
 
   it("Making map from list with string key", function() {
     var list = [{key: "id1"}, {key: "id2"}, {key: "id3"}, {key: "id4"}]
-    var map = diff.makeMap(list, "key")
-    map.should.be.deep.equal({
+    var map = diff.makeKeyIndexAndFree(list, "key")
+    map.keyIndex.should.be.deep.equal({
       id1: 0,
       id2: 1,
       id3: 2,
@@ -38,10 +38,10 @@ describe("List diff", function() {
 
   it("Making map from list with function", function() {
     var list = [{key: "id1"}, {key: "id2"}, {key: "id3"}, {key: "id4"}]
-    var map = diff.makeMap(list, function(item) {
+    var map = diff.makeKeyIndexAndFree(list, function(item) {
       return item.key
     })
-    map.should.be.deep.equal({
+    map.keyIndex.should.be.deep.equal({
       id1: 0,
       id2: 1,
       id3: 2,
@@ -139,19 +139,17 @@ describe("List diff", function() {
 
   it("Test with no key: string item", function() {
     var before = ["a", "b", "c", "d", "e"]
-    var after = ["c", "d", "e", "a", "b"]
+    var after = ["c", "d", "e", "a"]
     var diffs = diff.diff(before, after)
-    diffs.moves.length.should.be.equal(3)
-    perform(before, diffs)
-    assertListEqual(after, before)
-
+    diffs.moves.length.should.be.equal(1)
+    console.log(diffs.moves)
   })
 
   it("Test with no key: object item", function() {
     var before = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
-    var after = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
+    var after = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}, {id: "f"}]
     var diffs = diff.diff(before, after)
-    diffs.moves.length.should.be.equal(5)
+    diffs.moves.length.should.be.equal(1)
     perform(before, diffs)
     assertListEqual(after, before)
   })
