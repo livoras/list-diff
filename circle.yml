@@ -1,6 +1,9 @@
 machine:
   node:
     version: 4
+dependencies:
+  pre:
+    - npm install -g istanbul
 test:
   override:
     - istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec && cat ./coverage/coverage.json | ./node_modules/codecov.io/bin/codecov.io.js
