@@ -137,4 +137,23 @@ describe("List diff", function() {
     }
   })
 
+  it("Test with no key: string item", function() {
+    var before = ["a", "b", "c", "d", "e"]
+    var after = ["c", "d", "e", "a", "b"]
+    var diffs = diff.diff(before, after)
+    diffs.moves.length.should.be.equal(3)
+    perform(before, diffs)
+    assertListEqual(after, before)
+
+  })
+
+  it("Test with no key: object item", function() {
+    var before = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
+    var after = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
+    var diffs = diff.diff(before, after)
+    diffs.moves.length.should.be.equal(5)
+    perform(before, diffs)
+    assertListEqual(after, before)
+  })
+
 })
