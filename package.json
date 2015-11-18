@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/livoras/list-diff",
   "devDependencies": {
-    "chai": "^3.4.1"
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "codecov.io": "^0.1.6"
   }
 }
