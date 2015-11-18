@@ -4,7 +4,8 @@
   "description": "Diff two list",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
