@@ -10,6 +10,8 @@ The algorithm finding the minimal amount of moves is [Levenshtein distance](http
 
 ### Usage
 
+```javascript
+
     var diff = require("list-diff")
     var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
     var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
@@ -35,6 +37,8 @@ The algorithm finding the minimal amount of moves is [Levenshtein distance](http
     // now `oldList` is equal to `newList`
     // [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
     console.log(oldList) 
+
+```
 
 ### License 
 MIT
