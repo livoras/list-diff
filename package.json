@@ -1,6 +1,6 @@
 {
   "name": "list-diff2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Diff two list",
   "main": "index.js",
   "scripts": {
