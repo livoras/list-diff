@@ -192,4 +192,20 @@ describe("List diff", function() {
     assertListEqual(after, before)
   })
 
+  it("Test example", function() {
+    var diff = require("../index")
+    var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
+    var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
+
+    var moves = diff(oldList, newList, "id").moves
+    moves.forEach(function(move) {
+      if (move.type === 0) {
+        oldList.splice(move.index, 1)
+      } else {
+        oldList.splice(move.index, 0, move.item)
+      }
+    })
+    assertListEqual(newList, oldList)
+  })
+
 })
