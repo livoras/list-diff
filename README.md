@@ -1,4 +1,4 @@
-# list-diff [![build](https://circleci.com/gh/livoras/list-diff/tree/master.png?style=shield)](https://circleci.com/gh/livoras/list-diff) [![codecov.io](https://codecov.io/github/livoras/list-diff/coverage.svg?branch=master)](https://codecov.io/github/livoras/list-diff?branch=master)
+# list-diff [![build](https://circleci.com/gh/livoras/list-diff/tree/master.png?style=shield)](https://circleci.com/gh/livoras/list-diff) [![codecov.io](https://codecov.io/github/livoras/list-diff/coverage.svg?branch=master)](https://codecov.io/github/livoras/list-diff?branch=master)[![Dependency Status](https://david-dm.org/livoras/list-diff.svg)](https://david-dm.org/livoras/list-diff)
 
 Diff two lists in time O(n). 
 
