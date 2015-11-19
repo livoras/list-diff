@@ -8,12 +8,12 @@ This project is mostly influenced by [virtual-dom](https://github.com/Matt-Esch/
 
 ## Install
 
-    $ npm install list-diff --save
+    $ npm install list-diff2 --save
 
 ## Usage
 
 ```javascript
-var diff = require("list-diff")
+var diff = require("list-diff2")
 var oldList = [{id: "a"}, {id: "b"}, {id: "c"}, {id: "d"}, {id: "e"}]
 var newList = [{id: "c"}, {id: "a"}, {id: "b"}, {id: "e"}, {id: "f"}]
 
