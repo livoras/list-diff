@@ -4,11 +4,11 @@ Diff two lists in time O(n).
 
 The algorithm finding the minimal amount of moves is [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) which is O(N*M). This algorithm is not the best but is enougth for front-end DOM list manipulation and is mostly influenced by [virtual-dom](https://github.com/Matt-Esch/virtual-dom/blob/master/vtree/diff.js) algorithm.
 
-### Install
+## Install
 
     $ npm install list-diff --save
 
-### Usage
+## Usage
 
 ```javascript
 var diff = require("list-diff")
@@ -38,7 +38,7 @@ moves.forEach(function(move) {
 console.log(oldList) 
 ```
 
-### License 
+## License 
 MIT
 
 
