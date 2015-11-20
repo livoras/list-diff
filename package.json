@@ -4,7 +4,7 @@
   "description": "Diff two list",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "standard && npm run cover",
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
     "dev": "nodemon --exec mocha"
   },

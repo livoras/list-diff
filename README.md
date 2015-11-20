@@ -1,7 +1,14 @@
-# list-diff [![build](https://circleci.com/gh/livoras/list-diff/tree/master.png?style=shield)](https://circleci.com/gh/livoras/list-diff) [![codecov.io](https://codecov.io/github/livoras/list-diff/coverage.svg?branch=master)](https://codecov.io/github/livoras/list-diff?branch=master) [![Dependency Status](https://david-dm.org/livoras/list-diff.svg)](https://david-dm.org/livoras/list-diff)
+list-diff 
+=================
+
+[![build](https://circleci.com/gh/livoras/list-diff/tree/master.png?style=shield)](https://circleci.com/gh/livoras/list-diff) [![codecov.io](https://codecov.io/github/livoras/list-diff/coverage.svg?branch=master)](https://codecov.io/github/livoras/list-diff?branch=master)  [![Dependency Status](https://david-dm.org/livoras/list-diff.svg)](https://david-dm.org/livoras/list-diff)
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+
+## Introduction
 
 Diff two lists in time O(n). 
-
+I
 The algorithm finding the minimal amount of moves is [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) which is O(n*m). This algorithm is not the best but is enougth for front-end DOM list manipulation. 
 
 This project is mostly influenced by [virtual-dom](https://github.com/Matt-Esch/virtual-dom/blob/master/vtree/diff.js) algorithm.
@@ -42,6 +49,3 @@ console.log(oldList)
 
 ## License 
 MIT
-
-
-

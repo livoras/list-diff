@@ -1,1 +1,1 @@
-module.exports = require("./lib/diff").diff
+module.exports = require('./lib/diff').diff
