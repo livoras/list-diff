@@ -30,7 +30,7 @@ var moves = diff(oldList, newList, "id")
 // moves: [
 //   {index: 3, type: 0},
 //   {index: 0, type: 1, item: {id: "c"}}, 
-//   {index: 0, type: 0}, 
+//   {index: 3, type: 0}, 
 //   {index: 4, type: 1, item: {id: "f"}}
 //  ]
 
