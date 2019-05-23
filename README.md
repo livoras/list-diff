@@ -34,7 +34,7 @@ var moves = diff(oldList, newList, "id")
 //   {index: 4, type: 1, item: {id: "f"}}
 //  ]
 
-moves.forEach(function(move) {
+moves.moves.forEach(function(move) {
   if (move.type === 0) {
     oldList.splice(move.index, 1) // type 0 is removing
   } else {
